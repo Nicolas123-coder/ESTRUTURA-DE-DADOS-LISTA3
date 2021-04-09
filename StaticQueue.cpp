@@ -1,13 +1,15 @@
 #include "StaticQueue.h"
 #include <string>
+// NICOLAS DE BARROS 
+// TIA : 32070837
 
 using namespace std;
 
 //Create()
 //Cria e retorna uma fila vazia.
 //
-//Pré - condição: N / A.
-//Pós - condição : Uma nova fila vazia é criada.
+//PrÃ© - condiÃ§Ã£o: N / A.
+//PÃ³s - condiÃ§Ã£o : Uma nova fila vazia Ã© criada.
 StaticQueue Create()
 {
 	StaticQueue queue =
@@ -24,7 +26,7 @@ StaticQueue Create()
 
 bool Enqueue(StaticQueue& queue, string elem)
 {
-	// Verifica se a fila está cheia.
+	// Verifica se a fila estÃ¡ cheia.
 	if (queue.count == Size(queue))
 	{
 		return false;
@@ -34,11 +36,11 @@ bool Enqueue(StaticQueue& queue, string elem)
 	queue.fila[queue.rear] = elem;
 
 	// "Vetor circular": se chegou no final do vetor (no limite/capacidade do vetor),
-	// a variável rear, que é usada para indicar o índice correto para um novo elemento da fila,
-	// volta pro início do vetor.
-	queue.rear = (queue.rear + 1) % Size(queue); // Mantém queue.rear no intervalo 0 <= queue.rear < Size(queue).
+	// a variÃ¡vel rear, que Ã© usada para indicar o Ã­ndice correto para um novo elemento da fila,
+	// volta pro inÃ­cio do vetor.
+	queue.rear = (queue.rear + 1) % Size(queue); // MantÃ©m queue.rear no intervalo 0 <= queue.rear < Size(queue).
 
-	// A linha acima equivale à:
+	// A linha acima equivale Ã :
 	// ++queue.rear;
 	// if (queue.rear == Size(queue))
 	// {
@@ -62,11 +64,11 @@ string Dequeue(StaticQueue& queue)
 	queue.fila[queue.front] = '\0';
 
 	// "Vetor circular": se chegou no final do vetor (no limite/capacidade do vetor),
-	// a variável front, que é usada para indicar o índice correto do primeiro elemento da fila,
-	// volta pro início do vetor.
-	queue.front = (queue.front + 1) % Size(queue); // Mantém queue.front no intervalo 0 <= queue.front < Size(queue).
+	// a variÃ¡vel front, que Ã© usada para indicar o Ã­ndice correto do primeiro elemento da fila,
+	// volta pro inÃ­cio do vetor.
+	queue.front = (queue.front + 1) % Size(queue); // MantÃ©m queue.front no intervalo 0 <= queue.front < Size(queue).
 
-	// A linha acima equivale à:
+	// A linha acima equivale Ã :
 	// ++queue.front;
 	// if (queue.front == Size(queue))
 	// {

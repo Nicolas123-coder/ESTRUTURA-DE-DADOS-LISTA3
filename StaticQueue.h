@@ -3,6 +3,9 @@
 #include <ctime>
 #include <string>
 
+//NICOLAS DE BARROS 
+// TIA : 32070837
+
 using namespace std;
 
 // Estrutura de dados do tipo Fila.
@@ -17,63 +20,63 @@ struct StaticQueue
 	string fila[STATIC_QUEUE_CAPACITY];
 };
 
-// Sintaxe de funÁ„o:
-// <tipo do retorno> <nome da funÁ„o>(<par‚metros, caso exista>);
+// Sintaxe de fun√ß√£o:
+// <tipo do retorno> <nome da fun√ß√£o>(<par√¢metros, caso exista>);
 
 //Create()
 //Cria e retorna uma fila vazia.
 //
-//PrÈ - condiÁ„o: N / A.
-//PÛs - condiÁ„o : Uma nova fila vazia È criada.
+//Pr√© - condi√ß√£o: N / A.
+//P√≥s - condi√ß√£o : Uma nova fila vazia √© criada.
 StaticQueue Create();
 
 //Enqueue(queue, elem)
-//Insere o elemento elem no fim da fila queue, se a fila n„o estiver cheia.
+//Insere o elemento elem no fim da fila queue, se a fila n√£o estiver cheia.
 //
-//PrÈ - condiÁ„o: A fila queue È v·lida.
-//PÛs - condiÁ„o : O final da fila contÈm o elemento elem OU erro se a fila estiver cheia.
+//Pr√© - condi√ß√£o: A fila queue √© v√°lida.
+//P√≥s - condi√ß√£o : O final da fila cont√©m o elemento elem OU erro se a fila estiver cheia.
 bool Enqueue(StaticQueue& queue_A, string elem);
 
 //Dequeue(queue)
-//Remove e retorna o primeiro elemento da fila queue, se a fila n„o estiver vazia.
+//Remove e retorna o primeiro elemento da fila queue, se a fila n√£o estiver vazia.
 //
-//PrÈ - condiÁ„o: A fila queue È v·lida.
-//PÛs - condiÁ„o : Remove e retorna o primeiro elemento da fila OU erro se a fila estiver vazia.
+//Pr√© - condi√ß√£o: A fila queue √© v√°lida.
+//P√≥s - condi√ß√£o : Remove e retorna o primeiro elemento da fila OU erro se a fila estiver vazia.
 string Dequeue(StaticQueue& queue);
 
 //Front(queue)
-//Retorna uma referÍncia do elemento que est· no comeÁo da fila(mas n„o o remove), se a fila n„o estiver vazia.
+//Retorna uma refer√™ncia do elemento que est√° no come√ßo da fila(mas n√£o o remove), se a fila n√£o estiver vazia.
 //
-//PrÈ - condiÁ„o: A fila queue È v·lida.
-//PÛs - condiÁ„o : Retorna o primeiro elemento da fila sem removÍ - lo OU erro se a fila estiver vazia.
+//Pr√© - condi√ß√£o: A fila queue √© v√°lida.
+//P√≥s - condi√ß√£o : Retorna o primeiro elemento da fila sem remov√™ - lo OU erro se a fila estiver vazia.
 string Front(const StaticQueue& queue);
 
 //Size(queue)
 //Retorna a capacidade da fila.
 //
-//PrÈ - condiÁ„o: A fila queue È v·lida.
-//PÛs - condiÁ„o : N / A.
+//Pr√© - condi√ß√£o: A fila queue √© v√°lida.
+//P√≥s - condi√ß√£o : N / A.
 int Size(const StaticQueue& queue);
 
 //Count(queue)
 //Retorna a quantidade de elementos na fila.
 //
-//PrÈ - condiÁ„o: A fila queue È v·lida.
-//PÛs - condiÁ„o : N / A.
+//Pr√© - condi√ß√£o: A fila queue √© v√°lida.
+//P√≥s - condi√ß√£o : N / A.
 int Count(const StaticQueue& queue);
 
 //IsEmpty(queue)
-//Retorna true se a fila estiver vazia ou falso, caso contr·rio.
+//Retorna true se a fila estiver vazia ou falso, caso contr√°rio.
 //
-//PrÈ - condiÁ„o: A fila queue È v·lida.
-//PÛs - condiÁ„o : N / A.
+//Pr√© - condi√ß√£o: A fila queue √© v√°lida.
+//P√≥s - condi√ß√£o : N / A.
 bool IsEmpty(const StaticQueue& queue);
 
 //Clear(queue)
 //Esvazia a fila(remove todos os elementos da fila).
 //
-//PrÈ - condiÁ„o: A fila queue È v·lida.
-//PÛs - condiÁ„o : A fila queue est· vazia.
+//Pr√© - condi√ß√£o: A fila queue √© v√°lida.
+//P√≥s - condi√ß√£o : A fila queue est√° vazia.
 bool Clear(StaticQueue& queue);
 
 #endif // __STATIC_QUEUE_H__
